@@ -1,0 +1,46 @@
+local NothingLibrary = loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/3345-c-a-t-s-u-s/NOTHING/main/source.lua'))();
+local Windows = NothingLibrary.new({
+	Title = "TvHub | Mimic",
+	Description = " Mimic Ui Library",
+	Keybind = Enum.KeyCode.LeftControl,
+	Logo = 'http://www.roblox.com/asset/?id=96004865781147'
+})
+
+local TabFrame = Windows:NewTab({
+	Title = "b1c2",
+	Description = "Exploit",
+	Icon = "rbxassetid://96004865781147"
+})
+
+local Section = TabFrame:NewSection({
+	Title = "Part 1Auto Pass",
+	Icon = "rbxassetid://7743869054",
+	Position = "Left"
+})
+
+local InfoSection = TabFrame:NewSection({
+	Title = "Auto Pass if your wondering",
+	Icon = "rbxassetid://7733964719",
+	Position = "Right"
+})
+
+Section:NewButton({
+	Title = "Auto Pass",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(65.1209945678711, 56.403282165527344, -1584.929931640625)
+	end,
+})
+
+Section:NewButton({
+	Title = "Auto Pass (2)",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(236.37899780273438, 101.9411849975586, -588.1929931640625)
+	end,
+})
+
+Section:NewButton({
+	Title = "Part 3 Auto Pass",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(881.218994140625, 74.05597686767578, -354.45465087890625)
+	end,
+})
