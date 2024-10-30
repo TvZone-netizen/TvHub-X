@@ -44,3 +44,99 @@ Section:NewButton({
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(881.218994140625, 74.05597686767578, -354.45465087890625)
 	end,
 })
+
+local TabFrame = Windows:NewTab({
+	Title = "B1C3",
+	Description = "Auto Passes b1C3 For you",
+	Icon = "rbxassetid://7733960981"
+})
+
+local Section = TabFrame:NewSection({
+	Title = "Check these out",
+	Icon = "rbxassetid://7743869054",
+	Position = "Left"
+})
+
+Section:NewButton({
+	Title = "Auto Pass ;)",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2411.82421875, -25.032682418823242, 2276.953125)
+	end,
+})
+
+Section:NewButton({
+	Title = "Auto pass :) (2)",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(240.75540161132812, 31.71737289428711, 440.6657409667969)
+	end,
+})
+
+Section:NewButton({
+	Title = "Auto Pass 3 go to door",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-625.2945556640625, 947.8042602539062, -1368.4886474609375)
+	end,
+})
+
+local TabFrame = Windows:NewTab({
+	Title = "B1C4",
+	Description = "Hardest one to make...",
+	Icon = "rbxassetid://7733960981"
+})
+
+Section:NewButton({
+	Title = "Part 1 Auto Pass",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(85.46755981445312, -51.000003814697266, -1417.052734375)
+	end,
+})
+
+Section:NewButton({
+	Title = "TvZone Was Too Tired to make butterfly",
+	Callback = function()
+(
+	end,
+})
+
+Section:NewButton({
+	Title = "Kusonoki Auto Pass",
+	Callback = function()
+local curseditems = workspace.GameInfo.PuzzleItems:GetChildren()
+        local autoburn = workspace.Well.Burner
+
+        for _, curseditems2 in ipairs(curseditems) do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(curseditems2.Position)
+            task.wait(0.3)
+            fireproximityprompt(curseditems2.ProximityPrompt)
+        end
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(686.9511108398438, 26.722492218017578, 2252.857421875)
+        task.wait(0.5)
+        for i = 1, 6 do
+            fireproximityprompt(autoburn.ProximityPrompt)
+            task.wait(0.3)
+        end
+	end,
+})
+
+Section:NewButton({
+	Title = "Sama (pls click I don't know code of auto click",
+	Callback = function()
+local function checkHeart(index, position)
+
+        while true do
+            local heart = workspace.GameHearts:GetChildren()[index]
+            if heart and heart:FindFirstChild("Destroyed") then
+              break
+            else
+              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(position)
+                  end
+            task.wait(0.5)
+        end
+      end
+
+      checkHeart(1, Vector3.new(3208.44, 148.64, 2187.78))
+      checkHeart(3, Vector3.new(2806.88, 134.34, 2426.09))
+      checkHeart(2, Vector3.new(2603.96, 146.41, 2409))
+	end,
+})
