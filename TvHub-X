@@ -158,7 +158,6 @@ local Light = game:GetService("Lighting")
     Light.LightingChanged:Connect(dofullbright)
 	end,
 })
-
 Section:NewToggle({
 	Title = "Esp (" Players only retards")",
 	Default = false,
