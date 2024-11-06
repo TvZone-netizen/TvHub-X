@@ -1,7 +1,7 @@
-local NothingLibrary = loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/3345-c-a-t-s-u-s/NOTHING/main/source.lua'))()
+local NothingLibrary = loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/3345-c-a-t-s-u-s/NOTHING/main/source.lua'))();
 local Windows = NothingLibrary.new({
 	Title = "TvHub | Mimic",
-	Description = "Mimic Ui Library",
+	Description = " Mimic Ui Library",
 	Keybind = Enum.KeyCode.LeftControl,
 	Logo = 'http://www.roblox.com/asset/?id=96004865781147'
 })
@@ -13,13 +13,13 @@ local TabFrame = Windows:NewTab({
 })
 
 local Section = TabFrame:NewSection({
-	Title = "Part 1 Auto Pass",
+	Title = "Part 1Auto Pass",
 	Icon = "rbxassetid://7743869054",
 	Position = "Left"
 })
 
 local InfoSection = TabFrame:NewSection({
-	Title = "Auto Pass Info",
+	Title = "Auto Pass if your wondering",
 	Icon = "rbxassetid://7733964719",
 	Position = "Right"
 })
@@ -27,180 +27,142 @@ local InfoSection = TabFrame:NewSection({
 Section:NewButton({
 	Title = "Auto Pass",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(65.121, 56.403, -1584.93)
-	end
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(65.1209945678711, 56.403282165527344, -1584.929931640625)
+	end,
 })
 
 Section:NewButton({
 	Title = "Auto Pass (2)",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(236.379, 101.941, -588.193)
-	end
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(236.37899780273438, 101.9411849975586, -588.1929931640625)
+	end,
 })
 
 Section:NewButton({
 	Title = "Part 3 Auto Pass",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(881.219, 74.056, -354.455)
-	end
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(881.218994140625, 74.05597686767578, -354.45465087890625)
+	end,
 })
 
-local TabFrame2 = Windows:NewTab({
+local TabFrame = Windows:NewTab({
 	Title = "B1C3",
 	Description = "Auto Passes b1C3 For you",
 	Icon = "rbxassetid://7733960981"
 })
 
-local Section2 = TabFrame2:NewSection({
+local Section = TabFrame:NewSection({
 	Title = "Check these out",
 	Icon = "rbxassetid://7743869054",
 	Position = "Left"
 })
 
-Section2:NewButton({
+Section:NewButton({
 	Title = "Auto Pass ;)",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2411.824, -25.033, 2276.953)
-	end
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2411.82421875, -25.032682418823242, 2276.953125)
+	end,
 })
 
-Section2:NewButton({
-	Title = "Auto Pass :) (2)",
+Section:NewButton({
+	Title = "Auto pass :) (2)",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(240.755, 31.717, 440.666)
-	end
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(240.75540161132812, 31.71737289428711, 440.6657409667969)
+	end,
 })
 
-Section2:NewButton({
+Section:NewButton({
 	Title = "Auto Pass 3 go to door",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-625.295, 947.804, -1368.489)
-	end
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-625.2945556640625, 947.8042602539062, -1368.4886474609375)
+	end,
 })
 
-local TabFrame3 = Windows:NewTab({
+local TabFrame = Windows:NewTab({
 	Title = "B1C4",
 	Description = "Hardest one to make...",
 	Icon = "rbxassetid://7733960981"
 })
 
-local Section3 = TabFrame3:NewSection({
-	Title = "Auto Passes",
-	Icon = "rbxassetid://7743869054",
-	Position = "Left"
-})
-
-Section3:NewButton({
+Section:NewButton({
 	Title = "Part 1 Auto Pass",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(85.468, -51.000, -1417.053)
-	end
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(85.46755981445312, -51.000003814697266, -1417.052734375)
+	end,
 })
 
-Section3:NewButton({
+Section:NewButton({
+	Title = "TvZone Was Too Tired to make butterfly",
+	Callback = function()
+(
+	end,
+})
+
+Section:NewButton({
 	Title = "Kusonoki Auto Pass",
 	Callback = function()
-		local curseditems = workspace.GameInfo.PuzzleItems:GetChildren()
-		local autoburn = workspace.Well.Burner
+local curseditems = workspace.GameInfo.PuzzleItems:GetChildren()
+        local autoburn = workspace.Well.Burner
 
-		for _, item in ipairs(curseditems) do
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = item.Position
-			task.wait(0.3)
-			fireproximityprompt(item.ProximityPrompt)
-		end
+        for _, curseditems2 in ipairs(curseditems) do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(curseditems2.Position)
+            task.wait(0.3)
+            fireproximityprompt(curseditems2.ProximityPrompt)
+        end
 
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(686.951, 26.722, 2252.857)
-		task.wait(0.5)
-		for i = 1, 6 do
-			fireproximityprompt(autoburn.ProximityPrompt)
-			task.wait(0.3)
-		end
-	end
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(686.9511108398438, 26.722492218017578, 2252.857421875)
+        task.wait(0.5)
+        for i = 1, 6 do
+            fireproximityprompt(autoburn.ProximityPrompt)
+            task.wait(0.3)
+        end
+	end,
 })
 
-Section3:NewButton({
-	Title = "Sama Auto Pass",
+Section:NewButton({
+	Title = "Sama (pls click I don't know code of auto click",
 	Callback = function()
-		local function checkHeart(index, position)
-			while true do
-				local heart = workspace.GameHearts:GetChildren()[index]
-				if heart and heart:FindFirstChild("Destroyed") then
-					break
-				else
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(position)
-				end
-				task.wait(0.5)
-			end
-		end
+local function checkHeart(index, position)
 
-		checkHeart(1, Vector3.new(3208.44, 148.64, 2187.78))
-		checkHeart(3, Vector3.new(2806.88, 134.34, 2426.09))
-		checkHeart(2, Vector3.new(2603.96, 146.41, 2409))
-	end
+        while true do
+            local heart = workspace.GameHearts:GetChildren()[index]
+            if heart and heart:FindFirstChild("Destroyed") then
+              break
+            else
+              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(position)
+                  end
+            task.wait(0.5)
+        end
+      end
+
+      checkHeart(1, Vector3.new(3208.44, 148.64, 2187.78))
+      checkHeart(3, Vector3.new(2806.88, 134.34, 2426.09))
+      checkHeart(2, Vector3.new(2603.96, 146.41, 2409))
+	end,
 })
 
-Section3:NewToggle({
+Section:NewToggle({
 	Title = "FullBright",
 	Default = false,
-	Callback = function()
-		local Light = game:GetService("Lighting")
-
-		local function doFullBright()
-			Light.Ambient = Color3.new(1, 1, 1)
-			Light.ColorShift_Bottom = Color3.new(1, 1, 1)
-			Light.ColorShift_Top = Color3.new(1, 1, 1)
-		end
-
-		doFullBright()
-		Light.LightingChanged:Connect(doFullBright)
-	end
+	Callback = function(tr)
+local Light = game:GetService("Lighting")
+    
+    function dofullbright()
+    Light.Ambient = Color3.new(1, 1, 1)
+    Light.ColorShift_Bottom = Color3.new(1, 1, 1)
+    Light.ColorShift_Top = Color3.new(1, 1, 1)
+    end
+    
+    dofullbright()
+    
+    Light.LightingChanged:Connect(dofullbright)
+	end,
 })
 
-Section3:NewToggle({
-	Title = "ESP (Players only)",
+Section:NewToggle({
+	Title = "Esp (" Players only retards")",
 	Default = false,
-	Callback = function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
-	end
-})
-
-local TabFrame4 = Windows:NewTab({
-	Title = "Other (after this is book 2)",
-	Description = "Example tab",
-	Icon = "rbxassetid://7733960981"
-})
-
-Section3:NewSlider({
-	Title = "Fly Speed",
-	Min = 10,
-	Max = 50,
-	Default = 25,
-	Callback = function(value)
-		_G.FlySpeed = value
-	end
-})
-
-Section3:NewButton({
-	Title = "Fly Toggle",
-	Callback = function()
-		_G.StartFly = not _G.StartFly
-		local player = game.Players.LocalPlayer
-		local character = player.Character or player.CharacterAdded:Wait()
-		local rootPart = character:FindFirstChild("HumanoidRootPart")
-
-		if _G.StartFly then
-			local bv = Instance.new("BodyVelocity", rootPart)
-			bv.MaxForce = Vector3.new(9e9, 9e9, 9e9)
-			local bg = Instance.new("BodyGyro", rootPart)
-			bg.MaxTorque = Vector3.new(9e9, 9e9, 9e9)
-
-			while _G.StartFly do
-				task.wait()
-				bv.Velocity = workspace.CurrentCamera.CFrame.LookVector * (_G.FlySpeed or 25)
-				bg.CFrame = workspace.CurrentCamera.CFrame
-			end
-			bv:Destroy()
-			bg:Destroy()
-		end
-	end
+	Callback = function(tr)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
+	end,
 })
