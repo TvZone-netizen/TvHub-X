@@ -2,7 +2,6 @@ local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/RileyB
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
-
 local Window = Fluent:CreateWindow({
     Title = "TvHub" .. Fluent.Version,
     SubTitle = "by TvZone",
@@ -23,7 +22,7 @@ Tabs.Main:AddButton({
     Title = "AutoPass",
     Description = "Auto passes part 1",
     Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(65.1209945678711, 56.403282165527344, -1584.929931640625)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(65.1209945678711, 56.403282165527344, -1584.929931640625)
     end
 })
 
@@ -31,7 +30,7 @@ Tabs.Main:AddButton({
     Title = "Part 2 Auto Pass",
     Description = "Very important button",
     Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(236.37899780273438, 101.9411849975586, -588.1929931640625)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(236.37899780273438, 101.9411849975586, -588.1929931640625)
     end
 })
 
@@ -39,7 +38,7 @@ Tabs.Main:AddButton({
     Title = "Part 3 Auto Pass",
     Description = "Very important button",
     Callback = function()
-game.Players.LocalPlayer.Character,HumanoidRootPart.CFrame= CFrame.new(906.8800048828125, 72.92420959472656, -354.8910827636719)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(906.8800048828125, 72.92420959472656, -354.8910827636719)
     end
 })
 
@@ -49,7 +48,7 @@ Tabs.Main:AddButton({
     Title = "1 auto pass",
     Description = "Self Explanatory",
     Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2411.82421875, -25.032682418823242, 2276.953125)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2411.82421875, -25.032682418823242, 2276.953125)
     end
 })
 
@@ -57,7 +56,7 @@ Tabs.Main:AddButton({
     Title = "Part 2 Auto Pass",
     Description = "Self Explanatory",
     Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(240.75540161132812, 31.71737289428711, 440.6657409667969)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(240.75540161132812, 31.71737289428711, 440.6657409667969)
     end
 })
 
@@ -65,7 +64,7 @@ Tabs.Main:AddButton({
     Title = "Part 3 Auto Pass",
     Description = "Self Explanatory",
     Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-625.2945556640625, 947.8042602539062, -1368.4886474609375)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-625.2945556640625, 947.8042602539062, -1368.4886474609375)
     end
 })
 
@@ -75,71 +74,46 @@ Tabs.Main:AddButton({
     Title = "1 auto pass",
     Description = "Self Explanatory",
     Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(85.46755981445312, -51.000003814697266, -1417.052734375)
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Do butter fly ur self",
-    Description = "self explanatory",
-    Callback = function()
-)
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Kusonoki Auto pass",
-    Description = "Self Explanatory",
-    Callback = function()
-
-
-
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(85.46755981445312, -51.000003814697266, -1417.052734375)
     end
 })
 
 Tabs.Main:AddButton({
     Title = "Heart Part",
-    Description = " Auto Pass ",
+    Description = "Auto Pass",
     Callback = function()
-local function checkHeart(index, position)
-
-        while true do
-            local heart = workspace.GameHearts:GetChildren()[index]
-            if heart and heart:FindFirstChild("Destroyed") then
-              break
-            else
-              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(position)
-                  end
-            task.wait(0.5)
+        local function checkHeart(index, position)
+            while true do
+                local heart = workspace.GameHearts:GetChildren()[index]
+                if heart and heart:FindFirstChild("Destroyed") then
+                    break
+                else
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(position)
+                end
+                task.wait(0.5)
+            end
         end
-      end
-
-      checkHeart(1, Vector3.new(3208.44, 148.64, 2187.78))
-      checkHeart(3, Vector3.new(2806.88, 134.34, 2426.09))
-      checkHeart(2, Vector3.new(2603.96, 146.41, 2409))
+        checkHeart(1, Vector3.new(3208.44, 148.64, 2187.78))
+        checkHeart(3, Vector3.new(2806.88, 134.34, 2426.09))
+        checkHeart(2, Vector3.new(2603.96, 146.41, 2409))
     end
 })
 
 local Slider = Tabs.Main:AddSlider("Slider", {
-        Title = "Increase WS (b1 only)",
-        Description = "Increase WalkSpeed Silly",
-        Default = 2,
-        Min = 0,
-        Max = 5,
-        Rounding = 1,
-        Callback = function(Value)
-        local AntiSpeed = game:GetService("Players").LocalPlayer.PlayerScripts:FindFirstChild("Anti-Speed") 
-
-    if AntiSpeed then
-      AntiSpeed:Destroy()
-    end
-    
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-        
+    Title = "Increase WS (b1 only)",
+    Description = "Increase WalkSpeed",
+    Default = 2,
+    Min = 0,
+    Max = 5,
+    Rounding = 1,
+    Callback = function(Value)
+        local AntiSpeed = game:GetService("Players").LocalPlayer.PlayerScripts:FindFirstChild("Anti-Speed")
+        if AntiSpeed then
+            AntiSpeed:Destroy()
         end
-    })
-
-
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    end
+})
 
 local Tabs = {
     Main = Window:AddTab({ Title = "Other", Icon = "" }),
@@ -149,25 +123,21 @@ Tabs.Main:AddButton({
     Title = "FullBright",
     Description = "Very important button",
     Callback = function()
-local Light = game:GetService("Lighting")
-    
-    function dofullbright()
-    Light.Ambient = Color3.new(1, 1, 1)
-    Light.ColorShift_Bottom = Color3.new(1, 1, 1)
-    Light.ColorShift_Top = Color3.new(1, 1, 1)
-    end
-    
-    dofullbright()
-    
-    Light.LightingChanged:Connect(dofullbright)
+        local Light = game:GetService("Lighting")
+        function dofullbright()
+            Light.Ambient = Color3.new(1, 1, 1)
+            Light.ColorShift_Bottom = Color3.new(1, 1, 1)
+            Light.ColorShift_Top = Color3.new(1, 1, 1)
+        end
+        dofullbright()
+        Light.LightingChanged:Connect(dofullbright)
     end
 })
 
-
 Tabs.Main:AddButton({
     Title = "Esp (Players Only)",
-    Description = "Players only you retard if you think it is monster",
+    Description = "Players only",
     Callback = function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
     end
 })
