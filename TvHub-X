@@ -230,7 +230,8 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2372.278
 
 local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
     Title = "Tp to house",
-    Values = {"one", "two", "three", "four", "five",Num Multi = false,
+    Values = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"},
+    Multi = false,
     Default = 1,
 })
 
