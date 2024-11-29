@@ -138,3 +138,117 @@ Tabs.Main:AddSlider("Slider", {
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
     end
 })
+local Tabs = {
+    Main = Window:AddTab({ Title = "B2C3", Icon = "" }),
+}
+
+Tabs.Main:AddButton({
+    Title = "Esp Yen",
+    Description = "Very important button",
+    Callback = function()
+local RunService = game:GetService("RunService")
+local highlightedObjects = {}
+
+local function handleNewObject(obj)
+    if obj:IsA("MeshPart") and obj.Name == "YenCoin" then
+        if not highlightedObjects[obj] then
+            if not obj:FindFirstChildOfClass("BillboardGui") then
+                local BillboardGui = Instance.new("BillboardGui")
+                local TextLabel = Instance.new("TextLabel")
+
+                BillboardGui.Parent = obj
+                BillboardGui.AlwaysOnTop = true
+                BillboardGui.Size = UDim2.new(0, 100, 0, 50)
+                BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
+
+                TextLabel.Parent = BillboardGui
+                TextLabel.BackgroundTransparency = 1
+                TextLabel.Size = UDim2.new(1, 0, 1, 0)
+                TextLabel.Text = "Yen"
+                TextLabel.TextScaled = true
+                TextLabel.TextColor3 = Color3.new(1, 1, 0)
+                TextLabel.TextStrokeTransparency = 0.5
+
+                highlightedObjects[obj] = true
+            end
+        end
+    end
+end
+
+local function handleExistingObjects()
+    for _, obj in ipairs(workspace:GetDescendants()) do
+        handleNewObject(obj)
+    end
+end
+
+workspace.DescendantAdded:Connect(function(descendant)
+    handleNewObject(descendant)
+end)
+
+RunService.Heartbeat:Connect(function()
+    handleExistingObjects()
+end)
+
+handleExistingObjects()
+    end
+})
+
+Tabs.Main:AddButton({
+    Title = "auto Win boogi",
+    Description = "Very important button",
+    Callback = function()
+local Larvas = workspace.Section4.HotPotato.Givers:GetChildren()
+
+  for _, Larva in ipairs(Larvas) do
+    local Root = Larva:FindFirstChild("RootPart")
+
+    if Root then
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Root.Position)
+      task.wait(0.3)
+      fireproximityprompt(Root.ProximityPrompt)
+      task.wait(0.3)
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1935.5745849609375, 19.303937911987305, 4645.83251953125)
+      task.wait(0.5)
+      fireproximityprompt(workspace.Section4.DogWall.RootPart.ProximityPrompt)
+    else
+
+      RaelHubFunction.CreateNotification("Não foi possível encontrar", 3)
+
+    end
+  end
+    end
+})
+
+
+Tabs.Main:AddButton({
+    Title = "Auto Pass Mud",
+    Description = "Trovi goat",
+    Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2372.278564453125, -54.0419807434082, 6150.95947265625)
+    end
+})
+
+local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
+    Title = "Choose Number",
+    Values = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"},
+    Multi = false,
+    Default = 1,
+})
+
+Dropdown:OnChanged(function(Value)
+    print(Value)
+    if Value == "one" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1683.1409912109375, 17.44354248046875, -757.4575805664062)
+    elseif Value == "two" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2086.355224609375, 17.428346633911133, -798.2462158203125)
+    elseif Value == "three" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1651.8858642578125, 17.3446102142334, -453.3670349121094)
+    elseif Value == "four" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1874.060791015625, 17.616792678833008, -466.650146484375)
+    elseif Value == "five" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2192.72314453125, 17.42535972595215, -483.6636657714844)
+    end
+end) 
+
+
+
