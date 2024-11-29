@@ -194,8 +194,8 @@ handleExistingObjects()
 })
 
 Tabs.Main:AddButton({
-    Title = "Button",
-    Description = "Very important button",
+    Title = "Auto Train",
+    Description = "AutoPass and go to train directly",
     Callback = function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2354.091796875, -7.329235076904297, 2261.81396484375)
     end
