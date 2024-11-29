@@ -194,6 +194,15 @@ handleExistingObjects()
 })
 
 Tabs.Main:AddButton({
+    Title = "Button",
+    Description = "Very important button",
+    Callback = function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2354.091796875, -7.329235076904297, 2261.81396484375)
+    end
+})
+
+
+Tabs.Main:AddButton({
     Title = "auto Win boogi",
     Description = "Very important button",
     Callback = function()
