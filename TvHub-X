@@ -249,5 +249,17 @@ Dropdown:OnChanged(function(Value)
     end
 end) 
 
-
-
+Tabs.Main:AddButton({
+    Title = "Start CutScene Of the fallen ruler",
+    Description = "Very important button",
+    Callback = function()
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2714.109375, 172.54827880859375, 8248.515625)  
+    end
+})
+Tabs.Main:AddButton({
+    Title = "Complete the trial...",
+    Description = "Very important button",
+    Callback = function()
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1702.4271240234375, 88.25241088867188, 7791.55859375)   
+    end
+})
