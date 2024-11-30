@@ -79,6 +79,21 @@ Tabs.Main:AddButton({
 })
 
 Tabs.Main:AddButton({
+    Title = "2nd Auto Pass",
+    Description = "Very important button",
+    Callback = function()
+    
+local butterflies = workspace.Butterflies:GetChildren()
+
+for _, butterfly in ipairs(butterflies) do
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(butterfly.Position)
+  task.wait(0.3)
+  fireproximityprompt(butterfly.ProximityPrompt)
+end
+    end
+})
+
+Tabs.Main:AddButton({
     Title = "Kusonoki Auto pass",
     Description = "Automatically burns cursed items",
     Callback = function()
