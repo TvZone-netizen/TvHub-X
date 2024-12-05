@@ -1,6 +1,7 @@
 local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/RileyBeeRBLX4/UI-Library/refs/heads/main/Fluent%20UI/Library.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
-local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()CT
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+
 
 local Window = Fluent:CreateWindow({
     Title = "TvHub" .. Fluent.Version,
@@ -16,143 +17,164 @@ local Tabs = {
     Main = Window:AddTab({ Title = "Book 1", Icon = "" }),
 }
 
-local Section2 = Tabs.Main:AddSection("B1C2")
+local Section = Tabs.Main:AddSection("B1c2")
 
 Tabs.Main:AddButton({
     Title = "AutoPass",
     Description = "Auto passes part 1",
     Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(65.121, 56.403, -1584.93)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(65.1209945678711, 56.403282165527344, -1584.929931640625)
     end
 })
 
 Tabs.Main:AddButton({
     Title = "Part 2 Auto Pass",
-    Description = "Self Explanatory",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(236.379, 101.941, -588.193)
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Part 3 Auto Pass",
-    Description = "Self Explanatory",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(906.88, 72.924, -354.891)
-    end
-})
-
-local Section3 = Tabs.Main:AddSection("B1C3")
-
-Tabs.Main:AddButton({
-    Title = "1 auto pass",
-    Description = "Self Explanatory",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2411.824, -25.033, 2276.953)
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Part 2 Auto Pass",
-    Description = "Self Explanatory",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(240.755, 31.717, 440.666)
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Part 3 Auto Pass",
-    Description = "Self Explanatory",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-625.295, 947.804, -1368.489)
-    end
-})
-
-local Section4 = Tabs.Main:AddSection("B1C4")
-
-Tabs.Main:AddButton({
-    Title = "1 auto pass",
-    Description = "Self Explanatory",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(85.467, -51, -1417.053)
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "2nd Auto Pass",
     Description = "Very important button",
     Callback = function()
-    
-local butterflies = workspace.Butterflies:GetChildren()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(236.37899780273438, 101.9411849975586, -588.1929931640625)
+    end
+})
 
-for _, butterfly in ipairs(butterflies) do
-  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(butterfly.Position)
-  task.wait(0.3)
-  fireproximityprompt(butterfly.ProximityPrompt)
-end
+Tabs.Main:AddButton({
+    Title = "Part 3 Auto Pass",
+    Description = "Very important button",
+    Callback = function()
+game.Players.LocalPlayer.Character,HumanoidRootPart.CFrame= CFrame.new(906.8800048828125, 72.92420959472656, -354.8910827636719)
+    end
+})
+
+local Section = Tabs.Main:AddSection("B1C3")
+
+Tabs.Main:AddButton({
+    Title = "1 auto pass",
+    Description = "Self Explanatory",
+    Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2411.82421875, -25.032682418823242, 2276.953125)
+    end
+})
+
+Tabs.Main:AddButton({
+    Title = "Part 2 Auto Pass",
+    Description = "Self Explanatory",
+    Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(240.75540161132812, 31.71737289428711, 440.6657409667969)
+    end
+})
+
+Tabs.Main:AddButton({
+    Title = "Part 3 Auto Pass",
+    Description = "Self Explanatory",
+    Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-625.2945556640625, 947.8042602539062, -1368.4886474609375)
+    end
+})
+
+local Section = Tabs.Main:AddSection("B1C4")
+
+Tabs.Main:AddButton({
+    Title = "1 auto pass",
+    Description = "Self Explanatory",
+    Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(85.46755981445312, -51.000003814697266, -1417.052734375)
+    end
+})
+
+Tabs.Main:AddButton({
+    Title = "Do butter fly ur self",
+    Description = "self explanatory",
+    Callback = function()
+)
     end
 })
 
 Tabs.Main:AddButton({
     Title = "Kusonoki Auto pass",
-    Description = "Automatically burns cursed items",
+    Description = "Self Explanatory",
     Callback = function()
-        local cursedItems = workspace.GameInfo.PuzzleItems:GetChildren()
-        local autoBurn = workspace.Well.Burner
 
-        for _, item in ipairs(cursedItems) do
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(item.Position)
-            task.wait(0.3)
-            fireproximityprompt(item.ProximityPrompt)
-        end
 
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(686.951, 26.722, 2252.857)
-        task.wait(0.5)
 
-        for _ = 1, 6 do
-            fireproximityprompt(autoBurn.ProximityPrompt)
-            task.wait(0.3)
-        end
     end
 })
 
 Tabs.Main:AddButton({
     Title = "Heart Part",
-    Description = "Auto Pass",
+    Description = " Auto Pass ",
     Callback = function()
-        local function checkHeart(index, position)
-            while true do
-                local heart = workspace.GameHearts:GetChildren()[index]
-                if heart and heart:FindFirstChild("Destroyed") then
-                    break
-                else
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(position)
-                end
-                task.wait(0.5)
-            end
-        end
+local function checkHeart(index, position)
 
-        checkHeart(1, Vector3.new(3208.44, 148.64, 2187.78))
-        checkHeart(3, Vector3.new(2806.88, 134.34, 2426.09))
-        checkHeart(2, Vector3.new(2603.96, 146.41, 2409))
+        while true do
+            local heart = workspace.GameHearts:GetChildren()[index]
+            if heart and heart:FindFirstChild("Destroyed") then
+              break
+            else
+              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(position)
+                  end
+            task.wait(0.5)
+        end
+      end
+
+      checkHeart(1, Vector3.new(3208.44, 148.64, 2187.78))
+      checkHeart(3, Vector3.new(2806.88, 134.34, 2426.09))
+      checkHeart(2, Vector3.new(2603.96, 146.41, 2409))
     end
 })
 
-Tabs.Main:AddSlider("Slider", {
-    Title = "Increase WS (B1 Only)",
-    Description = "Increase WalkSpeed",
-    Default = 16,
-    Min = 0,
-    Max = 100,
-    Rounding = 0,
-    Callback = function(Value)
-        local antiSpeed = game.Players.LocalPlayer.PlayerScripts:FindFirstChild("Anti-Speed")
-        if antiSpeed then
-            antiSpeed:Destroy()
+local Slider = Tabs.Main:AddSlider("Slider", {
+        Title = "Increase WS (b1 only)",
+        Description = "Increase WalkSpeed Silly",
+        Default = 2,
+        Min = 0,
+        Max = 5,
+        Rounding = 1,
+        Callback = function(Value)
+        local AntiSpeed = game:GetService("Players").LocalPlayer.PlayerScripts:FindFirstChild("Anti-Speed") 
+
+    if AntiSpeed then
+      AntiSpeed:Destroy()
+    end
+    
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+        
         end
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    })
+
+
+
+local Tabs = {
+    Main = Window:AddTab({ Title = "Other", Icon = "" }),
+}
+
+Tabs.Main:AddButton({
+    Title = "FullBright",
+    Description = "Very important button",
+    Callback = function()
+local Light = game:GetService("Lighting")
+    
+    function dofullbright()
+    Light.Ambient = Color3.new(1, 1, 1)
+    Light.ColorShift_Bottom = Color3.new(1, 1, 1)
+    Light.ColorShift_Top = Color3.new(1, 1, 1)
+    end
+    
+    dofullbright()
+    
+    Light.LightingChanged:Connect(dofullbright)
     end
 })
+
+local Tabs = {
+    Main = Window:AddTab({ Title = "ByPasses", Icon = "" }),
+}
+
+
+Slider:OnChanged(function(Value)
+    print("Slider changed:", Value)
+end)
+
+Slider:SetValue(3)
+
+        
 local Tabs = {
     Main = Window:AddTab({ Title = "B2C3", Icon = "" }),
 }
@@ -209,31 +231,6 @@ handleExistingObjects()
 })
 
 Tabs.Main:AddButton({
-    Title = "Auto Train",
-    Description = "AutoPass and go to train directly",
-    Callback = function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2354.091796875, -7.329235076904297, 2261.81396484375)
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "FullBright",
-    Description = "Very important button",
-    Callback = function()
-    local Light = game:GetService("Lighting")
-
-		local function dofullbright()
-			Light.Ambient = Color3.new(1, 1, 1)
-			Light.ColorShift_Bottom = Color3.new(1, 1, 1)
-			Light.ColorShift_Top = Color3.new(1, 1, 1)
-		end
-
-		dofullbright()
-		Light.LightingChanged:Connect(dofullbright)
-    end
-})
-
-Tabs.Main:AddButton({
     Title = "auto Win boogi",
     Description = "Very important button",
     Callback = function()
@@ -269,7 +266,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2372.278
 })
 
 local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
-    Title = "Tp to house",
+    Title = "Choose Number",
     Values = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"},
     Multi = false,
     Default = 1,
@@ -288,7 +285,7 @@ Dropdown:OnChanged(function(Value)
     elseif Value == "five" then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2192.72314453125, 17.42535972595215, -483.6636657714844)
     end
-end) 
+end)
 
 Tabs.Main:AddButton({
     Title = "Start CutScene Of the fallen ruler",
@@ -297,6 +294,7 @@ Tabs.Main:AddButton({
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2714.109375, 172.54827880859375, 8248.515625)  
     end
 })
+
 
 Tabs.Main:AddButton({
     Title = "Complete the trial...",
