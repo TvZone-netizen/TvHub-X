@@ -3,7 +3,7 @@ local Library = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/
 
 local Window = Library:CreateWindow({
 	Title = "TvHub",
-	Logo = "rbxassetid://93163058412675",
+	Logo = "rbxassetid://",
 });
 
 local Tab = Window:AddTab({
