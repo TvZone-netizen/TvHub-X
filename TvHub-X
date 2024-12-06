@@ -223,11 +223,10 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1702.42
 Tab:AddBlock("Other")
 
 
-Tab:AddToggle({
-	Title = "Toggle esp Yen",
-	Default = false,
-	Callback = function(value)
-local RunService = game:GetService("RunService")
+Tab:AddButton({
+	Title = "Esp Yen",
+	Callback = function()
+	local RunService = game:GetService("RunService")
 local highlightedObjects = {}
 
 local function handleNewObject(obj)
@@ -270,16 +269,14 @@ RunService.Heartbeat:Connect(function()
     handleExistingObjects()
 end)
 
-handleExistingObjects()		
+handleExistingObjects()	
 	end,
 })
 
-
-Tab:AddToggle({
-	Title = "FB(FullBright",
-	Default = false,
-	Callback = function(value)
-local Light = game:GetService("Lighting")
+Tab:AddButton({
+	Title = "FB(fullBright)",
+	Callback = function()
+	local Light = game:GetService("Lighting")
     
     function dofullbright()
     Light.Ambient = Color3.new(1, 1, 1)
@@ -293,10 +290,9 @@ local Light = game:GetService("Lighting")
 	end,
 })
 
-Tab:AddToggle({
-	Title = "Toggle Esp Player",
-	Default = false,
-	Callback = function(value)
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()		
+Tab:AddButton({
+	Title = "Esp Player",
+	Callback = function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
 	end,
 })
