@@ -1,166 +1,183 @@
-local Library = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/Acrylic/refs/heads/main/source"))()
+local Library = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/Acrylic/refs/heads/main/source"))();
+
 
 local Window = Library:CreateWindow({
-    Title = "TvHub",
-    Logo = "rbxassetid://",
-})
+	Title = "TvHub",
+	Logo = "rbxassetid://93163058412675",
+});
 
 local Tab = Window:AddTab({
-    Title = "Book 1",
-    Icon = "",
-})
+	Title = "Book 1",
+	Icon = "",
+});
 
 Tab:AddBlock("B1C2")
 
 Tab:AddButton({
-    Title = "Auto Pass 1",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(65.121, 56.403, -1584.93)
-    end,
+	Title = "Auto Pass 1",
+	Callback = function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(65.121, 56.403, -1584.93)
+	end,
+})
+
+
+Tab:AddButton({
+	Title = "auto pass 2",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(236.379, 101.941, -588.193)    
+	end,
 })
 
 Tab:AddButton({
-    Title = "Auto Pass 2",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(236.379, 101.941, -588.193)
-    end,
-})
-
-Tab:AddButton({
-    Title = "Auto Pass 3",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(906.88, 72.924, -354.891)
-    end,
+	Title = "Auto Pass 3",
+	Callback = function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(906.88, 72.924, -354.891)  	
+	end,
 })
 
 Tab:AddBlock("B1C3")
 
 Tab:AddButton({
-    Title = "Auto Pass 1",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2411.824, -25.033, 2276.953)
-    end,
+	Title = "Auto Pass 1",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2411.824, -25.033, 2276.953)
+	end,
 })
 
 Tab:AddButton({
-    Title = "Auto Pass 2",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(240.755, 31.717, 440.666)
-    end,
+	Title = "Auto Pass 2",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(240.755, 31.717, 440.666) 
+	end,
 })
 
+
 Tab:AddButton({
-    Title = "Auto Pass 3",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-625.295, 947.804, -1368.489)
-    end,
+	Title = "Auto Pass 3",
+	Callback = function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-625.295, 947.804, -1368.489) 	
+	end,
 })
 
 Tab:AddBlock("B1C4")
 
+
 Tab:AddButton({
-    Title = "Auto Win Mannequin",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(85.467, -51, -1417.053)
-    end,
+	Title = "Auto win mannequin",
+	Callback = function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(85.467, -51, -1417.053)   	
+	end,
 })
 
 Tab:AddButton({
-    Title = "Auto Butterfly",
-    Callback = function()
-        local butterflies = workspace.Butterflies:GetChildren()
-        for _, butterfly in ipairs(butterflies) do
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(butterfly.Position)
-            task.wait(0.3)
-            fireproximityprompt(butterfly.ProximityPrompt)
-        end
-    end,
+	Title = "Auto ButterFly",
+	Callback = function()
+	local butterflies = workspace.Butterflies:GetChildren()
+
+for _, butterfly in ipairs(butterflies) do
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(butterfly.Position)
+  task.wait(0.3)
+  fireproximityprompt(butterfly.ProximityPrompt)
+end   	
+	end,
 })
 
+
 Tab:AddButton({
-    Title = "Burn All Cursed Items",
-    Callback = function()
-        local curseditems = workspace.GameInfo.PuzzleItems:GetChildren()
+	Title = "Burn All CURSED ITEMS",
+	Callback = function()
+	local curseditems = workspace.GameInfo.PuzzleItems:GetChildren()
         local autoburn = workspace.Well.Burner
-        for _, curseditem in ipairs(curseditems) do
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(curseditem.Position)
+
+        for _, curseditems2 in ipairs(curseditems) do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(curseditems2.Position)
             task.wait(0.3)
-            fireproximityprompt(curseditem.ProximityPrompt)
+            fireproximityprompt(curseditems2.ProximityPrompt)
         end
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(686.951, 26.722, 2252.857)
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(686.9511108398438, 26.722492218017578, 2252.857421875)
         task.wait(0.5)
         for i = 1, 6 do
             fireproximityprompt(autoburn.ProximityPrompt)
             task.wait(0.3)
-        end
-    end,
+        end	
+	end,
 })
+
 
 Tab:AddButton({
-    Title = "Auto Sama Heart",
-    Callback = function()
-        local function checkHeart(index, position)
-            while true do
-                local heart = workspace.GameHearts:GetChildren()[index]
-                if heart and heart:FindFirstChild("Destroyed") then
-                    break
-                else
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(position)
-                end
-                task.wait(0.5)
-            end
+	Title = "Auto Sama heart",
+	Callback = function()
+		local function checkHeart(index, position)
+
+        while true do
+            local heart = workspace.GameHearts:GetChildren()[index]
+            if heart and heart:FindFirstChild("Destroyed") then
+              break
+            else
+              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(position)
+                  end
+            task.wait(0.5)
         end
-        checkHeart(1, Vector3.new(3208.44, 148.64, 2187.78))
-        checkHeart(3, Vector3.new(2806.88, 134.34, 2426.09))
-        checkHeart(2, Vector3.new(2603.96, 146.41, 2409))
-    end,
+      end
+
+      checkHeart(1, Vector3.new(3208.44, 148.64, 2187.78))
+      checkHeart(3, Vector3.new(2806.88, 134.34, 2426.09))
+      checkHeart(2, Vector3.new(2603.96, 146.41, 2409))
+	end,
 })
 
+
 local Tab = Window:AddTab({
-    Title = "B2C3",
-    Icon = "home",
-})
+	Title = "B2C3",
+	Icon = "home",
+});
 
 Tab:AddBlock("Auto Go To Train")
 
 Tab:AddButton({
-    Title = "Skip All and Go to Train",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2354.092, -7.329, 2261.814)
-    end,
+	Title = "Skip all and go to train",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2354.091796875, -7.329235076904297, 2261.81396484375)		
+	end,
 })
 
 Tab:AddBlock("Auto BoogeyMan")
 
+
 Tab:AddButton({
-    Title = "Auto BoogeyMan",
-    Callback = function()
-        local Larvas = workspace.Section4.HotPotato.Givers:GetChildren()
-        for _, Larva in ipairs(Larvas) do
-            local Root = Larva:FindFirstChild("RootPart")
-            if Root then
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Root.Position)
-                task.wait(0.3)
-                fireproximityprompt(Root.ProximityPrompt)
-                task.wait(0.3)
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1935.575, 19.304, 4645.833)
-                task.wait(0.5)
-                fireproximityprompt(workspace.Section4.DogWall.RootPart.ProximityPrompt)
-            end
-        end
-    end,
+	Title = "Auto BoogeyMan",
+	Callback = function()
+	local Larvas = workspace.Section4.HotPotato.Givers:GetChildren()
+
+  for _, Larva in ipairs(Larvas) do
+    local Root = Larva:FindFirstChild("RootPart")
+
+    if Root then
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Root.Position)
+      task.wait(0.3)
+      fireproximityprompt(Root.ProximityPrompt)
+      task.wait(0.3)
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1935.5745849609375, 19.303937911987305, 4645.83251953125)
+      task.wait(0.5)
+      fireproximityprompt(workspace.Section4.DogWall.RootPart.ProximityPrompt)
+    else
+
+      RaelHubFunction.CreateNotification("Não foi possível encontrar", 3)
+	end,
 })
 
-Tab:AddBlock("Mud Part")
+Tab:AddBlock("Mud part")
 
 Tab:AddButton({
-    Title = "Auto Win Mud",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2372.279, -54.042, 6150.959)
-    end,
+	Title = "Auto Win Mud",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2372.278564453125, -54.0419807434082, 6150.95947265625)		
+	end,
 })
 
 Tab:AddBlock("Yurei")
+
 
 Tab:AddDropdown({
     Title = "Teleport",
@@ -168,72 +185,118 @@ Tab:AddDropdown({
     Default = "Location 1",
     Callback = function(value)
         local cframes = {
-            ["Location 1"] = CFrame.new(1683.141, 17.444, -757.458),
-            ["Location 2"] = CFrame.new(2086.355, 17.428, -798.246),
-            ["Location 3"] = CFrame.new(1651.886, 17.345, -453.367),
-            ["Location 4"] = CFrame.new(1874.061, 17.617, -466.650),
-            ["Location 5"] = CFrame.new(2192.723, 17.425, -483.664),
+            ["Location 1"] = CFrame.new(1683.1409912109375, 17.44354248046875, -757.4575805664062),
+            ["Location 2"] = CFrame.new(2086.355224609375, 17.428346633911133, -798.2462158203125),
+            ["Location 3"] = CFrame.new(1651.8858642578125, 17.3446102142334, -453.3670349121094),
+            ["Location 4"] = CFrame.new(1874.060791015625, 17.616792678833008, -466.650146484375),
+            ["Location 5"] = CFrame.new(2192.72314453125, 17.42535972595215, -483.6636657714844),
         }
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = cframes[value]
     end,
 })
 
+
 Tab:AddButton({
-    Title = "Yurei Boss Fly",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/TvZone-netizen/Fly-TvHub/refs/heads/main/Fly%20TvHub"))()
-    end,
+	Title = "Yurei  boss Fly",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/TvZone-netizen/Fly-TvHub/refs/heads/main/Fly%20TvHub"))()
+	end,
 })
+
 
 Tab:AddBlock("Shinigami")
 
 Tab:AddButton({
-    Title = "Start Trial",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2714.109, 172.548, 8248.516)
-    end,
+	Title = "Start Trial",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2714.109375, 172.54827880859375, 8248.515625)  		
+	end,
 })
 
 Tab:AddButton({
-    Title = "End Trial",
-    Callback = function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1702.427, 88.252, 7791.559)
-    end,
+	Title = "End Trial",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1702.4271240234375, 88.25241088867188, 7791.55859375)   
+	end,
 })
 
 Tab:AddBlock("Other")
 
-Tab:AddButton({
-    Title = "Esp Yen",
-    Callback = function()
-        local RunService = game:GetService("RunService")
-        local highlightedObjects = {}
-        local function handleNewObject(obj)
-            if obj:IsA("MeshPart") and obj.Name == "YenCoin" then
-                if not highlightedObjects[obj] then
-                    if not obj:FindFirstChildOfClass("BillboardGui") then
-                        local BillboardGui = Instance.new("BillboardGui")
-                        local TextLabel = Instance.new("TextLabel")
-                        BillboardGui.Parent = obj
-                        BillboardGui.AlwaysOnTop = true
-                        BillboardGui.Size = UDim2.new(0, 100, 0, 50)
-                        BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
-                        TextLabel.Parent = BillboardGui
-                        TextLabel.BackgroundTransparency = 1
-                        TextLabel.Size = UDim2.new(1, 0, 1, 0)
-                        TextLabel.Text = "Yen"
-                        TextLabel.TextScaled = true
-                        TextLabel.TextColor3 = Color3.new(1, 1, 0)
-                        TextLabel.TextStrokeTransparency = 0.5
-                        highlightedObjects[obj] = true
-                    end
-                end
+
+Tab:AddToggle({
+	Title = "Toggle esp Yen",
+	Default = false,
+	Callback = function(value)
+local RunService = game:GetService("RunService")
+local highlightedObjects = {}
+
+local function handleNewObject(obj)
+    if obj:IsA("MeshPart") and obj.Name == "YenCoin" then
+        if not highlightedObjects[obj] then
+            if not obj:FindFirstChildOfClass("BillboardGui") then
+                local BillboardGui = Instance.new("BillboardGui")
+                local TextLabel = Instance.new("TextLabel")
+
+                BillboardGui.Parent = obj
+                BillboardGui.AlwaysOnTop = true
+                BillboardGui.Size = UDim2.new(0, 100, 0, 50)
+                BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
+
+                TextLabel.Parent = BillboardGui
+                TextLabel.BackgroundTransparency = 1
+                TextLabel.Size = UDim2.new(1, 0, 1, 0)
+                TextLabel.Text = "Yen"
+                TextLabel.TextScaled = true
+                TextLabel.TextColor3 = Color3.new(1, 1, 0)
+                TextLabel.TextStrokeTransparency = 0.5
+
+                highlightedObjects[obj] = true
             end
         end
-        local function handleExistingObjects()
-            for _, obj in ipairs(workspace:GetDescendants()) do
-                handleNewObject(obj)
-            end
-        end
-        workspace.DescendantAdded:Connect(handleNewObject)
-        RunService.Heartbeat:Connect(handle
+    end
+end
+
+local function handleExistingObjects()
+    for _, obj in ipairs(workspace:GetDescendants()) do
+        handleNewObject(obj)
+    end
+end
+
+workspace.DescendantAdded:Connect(function(descendant)
+    handleNewObject(descendant)
+end)
+
+RunService.Heartbeat:Connect(function()
+    handleExistingObjects()
+end)
+
+handleExistingObjects()		
+	end,
+})
+
+
+Tab:AddToggle({
+	Title = "FB(FullBright",
+	Default = false,
+	Callback = function(value)
+local Light = game:GetService("Lighting")
+    
+    function dofullbright()
+    Light.Ambient = Color3.new(1, 1, 1)
+    Light.ColorShift_Bottom = Color3.new(1, 1, 1)
+    Light.ColorShift_Top = Color3.new(1, 1, 1)
+    end
+    
+    dofullbright()
+    
+    Light.LightingChanged:Connect(dofullbright)		
+	end,
+})
+
+Tab:AddToggle({
+	Title = "Toggle Esp Player",
+	Default = false,
+	Callback = function(value)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()		
+	end,
+})
